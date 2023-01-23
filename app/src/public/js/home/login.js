@@ -11,5 +11,12 @@ btn.addEventListener("click", () => {
     id: id.value,
     pw: pw.value,
   };
-  console.log(req);
+
+  fetch("/login", {
+    method: "POST",
+    headers: {
+      "Content-Tyoe": "application/json",
+    },
+    body: JSON.stringify(req),
+  });
 });
